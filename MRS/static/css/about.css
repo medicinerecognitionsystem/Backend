@@ -1,0 +1,14 @@
+main {
+  padding: max(5vw, 5vh);
+  height: calc(100vh - calc(3 * max(5vw, 5vh)));
+  /* 3 times because header, top and bottom padding */
+  background-image: url(../logo/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: auto calc(100vh - calc(3 * max(5vw, 5vh)));
+  background-position: 100% 100%;
+}
+
+.platformPic {
+  width: max(16vw, 16vh);
+  height: auto;
+}

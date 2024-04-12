@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="{% static 'logo/TU.png' %}" />
+    <link rel="stylesheet" href="{% static 'css/format.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+    <title>MedRec</title>
+  </head>
+  <body>
+    <header>
+      <img src="{% static 'logo/medRec.png' %}" alt="medRec Logo" id="logo" />
+      <h2>Medicine Recognition System</h2>
+      <a href="http://127.0.0.1:8000/about"><h3>About</h3></a>
+    </header>
+    <main>
+      <form
+        action="http://127.0.0.1:8000/web"
+        method="post"
+        enctype="multipart/form-data"
+      >
+        {% csrf_token %}
+        <h3>Take A Photo Of Medicine</h3>
+        <hr />
+        <br />
+        <input
+          type="file"
+          name="photo"
+          id="imageChooser"
+          accept="image/jpg, image/jpeg, image/png"
+          capture="environment"
+          required
+        />
+        <input type="submit" value="Upload" />
+      </form>
+    </main>
+    <footer>
+      <p>
+        &copy;&nbsp;2024&nbsp;-&nbsp;
+        <a href="https://manishmajhi.com.np" target="_blank">Manish Majhi</a
+        ><br />
+        Special Thanks to Sandipa Kattel and Sandhya Khanal
+      </p>
+    </footer>
+    <script>
+      const currentYear = new Date().getFullYear();
+      const yearElement = document.querySelector("footer p");
+      yearElement.innerHTML = yearElement.innerHTML.replace(
+        "2024",
+        currentYear
+      );
+    </script>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="{% static 'logo/TU.png' %}" />
+    <link rel="stylesheet" href="{% static 'css/format.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/about.css' %}" />
+    <title>About - MedRec</title>
+  </head>
+  <body>
+    <header>
+      <img src="{% static 'logo/medRec.png' %}" alt="medRec Logo" id="logo" />
+      <h2>Medicine Recognition System</h2>
+      <h3>About</h3>
+    </header>
+    <main>
+      <p class="hero_paragraph">
+        MedRec utilizes OpenFDA's public API to get information on the drug
+        detected from OCR.
+        <br />
+        It identifies the picture of a medicine by using Optical Character
+        Recognition.
+      </p>
+      <br />
+      <figure>
+        <a href="http://127.0.0.1:8000/"
+          ><img
+            src="{% static 'logo/get-it-on-web.png' %}"
+            alt="Try The Web App"
+            class="platformPic"
+        /></a>
+      </figure>
+    </main>
+  </body>
+</html>

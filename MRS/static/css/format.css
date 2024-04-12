@@ -1,0 +1,94 @@
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: system-ui, sans-serif;
+}
+
+h1,
+h2,
+h3,
+figure {
+  margin: 0;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  width: 100%;
+  height: max(5vw, 5vh);
+  padding: 0 max(1.5vw, 1.5vh);
+}
+
+#logo {
+  height: calc(max(5vw, 5vh) - max(1vw, 1vh));
+  width: auto;
+}
+
+a {
+  text-decoration: none;
+}
+a:link,
+a:visited {
+  color: blue;
+}
+a:hover,
+a:focus,
+a:active {
+  color: navy;
+}
+
+footer {
+  bottom: 0;
+  position: fixed;
+  display: inline-block;
+  width: 100%;
+}
+
+@media (orientation: landscape) {
+  a,
+  p,
+  pre,
+  div,
+  span {
+    font-size: 1.25vw;
+  }
+  h3 {
+    font-size: 1.5vw;
+  }
+  h2 {
+    font-size: 1.75vw;
+  }
+  h1 {
+    font-size: 3vw;
+  }
+
+  .hero_paragraph {
+    font-size: 1.75vw;
+  }
+}
+
+@media (orientation: portrait) {
+  a,
+  p,
+  pre,
+  div,
+  span {
+    font-size: 1.75vh;
+  }
+  h3 {
+    font-size: 2vh;
+  }
+  h2 {
+    font-size: 2.25vh;
+  }
+  h1 {
+    font-size: 4vh;
+  }
+
+  .hero_paragraph {
+    font-size: 2.25vh;
+  }
+}

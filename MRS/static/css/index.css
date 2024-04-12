@@ -1,0 +1,18 @@
+main {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: max(5vw, 5vh);
+}
+
+form {
+  width: 80vw;
+  border: 2px dotted darkgrey;
+  padding: 2vw 2vw 20vw 2vw;
+}
+
+footer > p {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}

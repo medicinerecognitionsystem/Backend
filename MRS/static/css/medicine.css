@@ -1,0 +1,41 @@
+main {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 25px;
+  background: #f8f8f8;
+}
+main:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+article {
+  padding: min(5vw, 5vh);
+  border: 0;
+}
+
+figure {
+  margin: 1vw;
+}
+
+#medicinePic {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+
+@media (orientation: landscape) {
+  main {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 64fr 36fr;
+    margin: min(8vw, 8vh) max(8vw, 8vh);
+  }
+}
+
+@media (orientation: portrait) {
+  main {
+    display: flex;
+    flex-direction: column;
+    margin: min(8vw, 8vh);
+  }
+}

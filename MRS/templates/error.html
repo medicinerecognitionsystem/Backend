@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="{% static 'logo/TU.png' %}" />
+    <link rel="stylesheet" href="{% static 'css/format.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/error.css' %}" />
+    <title>{{errorCode}} - MedRec</title>
+  </head>
+  <body>
+    <header>
+      <a href="http://127.0.0.1:8000/"
+        ><img src="{% static 'logo/medRec.png' %}" alt="medRec Logo" id="logo"
+      /></a>
+      <h2>Medicine Recognition System</h2>
+      <a href="http://127.0.0.1:8000/about"><h3>About</h3></a>
+    </header>
+    <main>
+      <h1 id="hero_title">Error&nbsp;{{errorCode}}</h1>
+      <p class="hero_paragraph">{{errorDescription}}</p>
+    </main>
+  </body>
+</html>

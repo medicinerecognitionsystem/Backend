@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="{% static 'logo/TU.png' %}" />
+    <link rel="stylesheet" href="{% static 'css/format.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/medicine.css' %}" />
+    <title>{{generic_name}} | MedRec</title>
+  </head>
+  <body>
+    <header style="box-shadow: none">
+      <a href="http://127.0.0.1:8000/"
+        ><img src="{% static 'logo/medRec.png' %}" alt="medRec Logo" id="logo"
+      /></a>
+      <h2>Medicine Recognition System</h2>
+      <a href="http://127.0.0.1:8000/about"><h3>About</h3></a>
+    </header>
+    <main>
+      <article>
+        <h2>{{generic_name}}</h2>
+        <hr />
+        <br />
+        <h3>Used As:</h3>
+        <ul>
+          {{purpose|safe}}
+        </ul>
+        <h3>Warning:</h3>
+        <ul>
+          {{do_not_use|safe}}
+        </ul>
+      </article>
+      <figure>
+        <img src="{{photo.url}}" alt="Your Medicine" id="medicinePic" />
+      </figure>
+    </main>
+  </body>
+</html>
